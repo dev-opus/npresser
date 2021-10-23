@@ -11,6 +11,8 @@ const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
 
+const { compress } = require('./utils/compressor');
+
 const input = cli.input;
 const flags = cli.flags;
 const { clear } = flags;
@@ -26,8 +28,19 @@ const { clear } = flags;
 
     if (input.includes('press')) {
       if (input[0] !== 'press') {
-        log('error', 'Unsupported argument format!');
+        return log('error', 'Unsupported argument format!');
       }
+
+      const files = input.filter(items => items !== 'press');
+      await compress(files);
+      log(
+        'success',
+        `${
+          files.length > 1
+            ? 'Files were successfully compressed!'
+            : 'File was successfully compressed!'
+        }`
+      );
     }
   } catch (error) {
     return log('error', error.message);
