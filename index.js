@@ -23,6 +23,12 @@ const { clear } = flags;
     if (input.includes('press') && input.includes('unpress')) {
       return log('error', 'Invalid Operation!');
     }
+
+    if (input.includes('press')) {
+      if (input[0] !== 'press') {
+        log('error', 'Unsupported argument format!');
+      }
+    }
   } catch (error) {
     return log('error', error.message);
   }
