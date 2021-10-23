@@ -49,6 +49,18 @@ const { clear } = flags;
       if (input[0] !== 'unpress') {
         return log('error', 'Unsupported argument format!');
       }
+
+      const files = input.filter(items => items !== 'unpress');
+      await decompress(files);
+      log(
+        'success',
+        `${
+          files.length > 1
+            ? 'Files were successfully decompressed!'
+            : 'File was successfully decompressed!'
+        }`
+      );
+      return;
     }
   } catch (error) {
     return log('error', error.message);
