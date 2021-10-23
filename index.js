@@ -18,4 +18,8 @@ const { clear } = flags;
 (async () => {
   init({ clear });
   input.includes(`help`) && cli.showHelp(0);
+
+  if (input.includes('press') && input.includes('unpress')) {
+    return log('error', 'Invalid Operation!');
+  }
 })();
