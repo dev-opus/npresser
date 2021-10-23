@@ -12,6 +12,7 @@ const cli = require('./utils/cli');
 const log = require('./utils/log');
 
 const { compress } = require('./utils/compressor');
+const { decompress } = require('./utils/decompressor');
 
 const input = cli.input;
 const flags = cli.flags;
@@ -41,6 +42,13 @@ const { clear } = flags;
             : 'File was successfully compressed!'
         }`
       );
+      return;
+    }
+
+    if (input.includes('unpress')) {
+      if (input[0] !== 'unpress') {
+        return log('error', 'Unsupported argument format!');
+      }
     }
   } catch (error) {
     return log('error', error.message);
