@@ -63,6 +63,9 @@ const { clear } = flags;
       return;
     }
   } catch (error) {
-    return log('error', error.message);
+    return log(
+      'error',
+      'An unexpected error occured. Check your files and try again!'
+    );
   }
 })();
