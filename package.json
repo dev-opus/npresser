@@ -1,37 +1,37 @@
 {
-	"name": "npresser",
-	"description": "A simple file compressor CLI application built with node.js ",
-	"version": "0.0.1",
-	"license": "UNLICENSED",
-	"bin": {
-		"npresser": "index.js"
-	},
-	"author": {
-		"name": "victor orlunda",
-		"email": "vicorlunda@gmail.com",
-		"url": "https://github.com/dev-opus"
-	},
-	"keywords": [
-		"npresser",
-		"victor orlunda"
-	],
-	"files": [
-		"index.js",
-		"utils"
-	],
-	"scripts": {
-		"format": "prettier --write \"./**/*.{js,json}\""
-	},
-	"dependencies": {
-		"chalk": "^4.1.2",
-		"cli-alerts": "^1.2.2",
-		"cli-handle-error": "^4.4.0",
-		"cli-handle-unhandled": "^1.1.1",
-		"cli-meow-help": "^2.0.2",
-		"cli-welcome": "^2.2.2",
-		"meow": "^9.0.0"
-	},
-	"devDependencies": {
-		"prettier": "^2.4.1"
-	}
+  "name": "npresser",
+  "description": "A simple file compressor CLI application built with node.js ",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "bin": {
+    "npresser": "index.js"
+  },
+  "author": {
+    "name": "victor orlunda",
+    "email": "vicorlunda@gmail.com",
+    "url": "https://github.com/dev-opus"
+  },
+  "keywords": [
+    "npresser",
+    "victor orlunda"
+  ],
+  "files": [
+    "index.js",
+    "utils"
+  ],
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,json}\""
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-alerts": "^1.2.2",
+    "cli-handle-error": "^4.4.0",
+    "cli-handle-unhandled": "^1.1.1",
+    "cli-meow-help": "^2.0.2",
+    "cli-welcome": "^2.2.2",
+    "meow": "^9.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
 }
